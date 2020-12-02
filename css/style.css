@@ -16,6 +16,49 @@
 
 body {
   font-size: 14px;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #717171;
+}
+
+/* classi comuni */
+a {
+  text-decoration: none;
+  color: #717171;
+}
+
+.active a {
+  color: #fff;
+}
+
+.active::before {
+  content:"";
+  display: inline-block;
+  height: 30px;
+  width: 2px;
+  background-color: #adff2f;
+  vertical-align: middle;
+  margin-right: -2px;
+  position: relative;
+  right: 15px;
+}
+
+h2, h3 {
+  color: white;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+h4 {
+  font-size: 0.9em;
+}
+
+
+.btn-empty {
+  border: 1px solid white;
+  padding: 10px 35px;
+  border-radius: 25px;
 }
 
 
@@ -26,45 +69,176 @@ body {
 
 /* Inizio main */
 main {
-  height: calc(100% - 80px);
+  height: calc(100% - 90px);
   display: flex;
+  background-color: #141922;
 }
-/* Inizio nav */
-main nav {
-  width: 250px;
+/* Inizio aside */
+main aside {
+  width: 240px;
   height: 100%;
+  padding: 15px;
   background-color: #000;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
-/* /nav */
+
+main aside .logo img {
+  width: 140px;
+}
+
+main aside .primary-search {
+  margin-top: 20px;
+}
+
+main aside .primary-search ul {
+  list-style-type: none;
+}
+
+main aside .primary-search ul li {
+  margin-bottom: 5px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+main aside .primary-search ul li a {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+main aside .primary-search ul li span {
+  vertical-align: middle;
+}
+
+main aside .primary-search .home {
+  position: relative;
+  right: 2px;
+}
+
+main aside .primary-search img {
+  width: 25px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+main aside .playlist-top h3 {
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+main aside .playlist-top .row-plus {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+main aside .playlist-top .row-plus i {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #a3a3a3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: black;
+  margin-right: 10px;
+}
+
+main aside .playlist-top .row-plus span {
+  font-weight: 700;
+}
+
+main aside .playlist-bottom {
+  margin-top: 15px;
+  overflow-y: auto;
+}
+
+main aside .playlist-bottom h4 {
+  margin-bottom: 15px;
+}
+
+main aside .new-playlist {
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+main aside .new-playlist img {
+  width: 20px;
+  vertical-align: middle;
+}
+
+main aside .new-playlist .row-download {
+  border-bottom: 1px solid #717171;
+  padding-bottom: 10px;
+}
+
+main aside .new-playlist .row-profile {
+  margin-top: 10px;
+}
+
+main aside .new-playlist .row-profile img {
+  width: 25px;
+  height: 25px;
+  background-color: #808080;
+  border-radius: 50%;
+}
+
+main aside .new-playlist span {
+  margin-left: 5px;
+}
+/* /aside */
+
 /* Inizio main content */
 main .main-content {
   width: calc(100% - 250px);
   height: 100%;
   display: flex;
   flex-direction: column;
-
 }
 
 main .main-content .main-content-top {
-  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+}
+
+main .main-content .main-content-top a {
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.9em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+main .main-content .main-content-top {
+  height: 90px;
   background-color: rgba(8, 11, 18, 0.8);
-  border: 1px solid orange;
 }
 
 main .main-content .main-content-bottom {
-  background-color: yellow;
   flex-grow: 1;
 }
+
+
 
 /* /main content */
 /* main */
 
 /* Inizio footer */
 footer {
-  height: 80px;
+  height: 90px;
   background-color: grey;
 }
 
