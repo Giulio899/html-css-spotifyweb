@@ -1,0 +1,77 @@
+/* debug */
+.debug {
+  width: 100%;
+  height: 50px;
+  border: 1px solid white;
+  background-color: SandyBrown;
+}
+/* /debug */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+}
+
+
+.container {
+  width: 100%;
+  height: 100vh;
+  /* background-color: blue; */
+}
+
+/* Inizio main */
+main {
+  height: 100%;
+  display: flex;
+}
+/* Inizio nav */
+main nav {
+  width: 250px;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* /nav */
+/* Inizio main content */
+main .main-content .main-content-top {
+  width: calc(100% - 250px);
+  height: 80px;
+  background-color: rgb(8, 11, 18);
+  border: 1px solid orange;
+}
+/* /main content */
+
+
+/* main */
+
+
+
+/* media queries desktop first */
+
+/* Large devices */
+@media screen and (min-width: 1200px) {
+
+}
+
+/* Medium devices */
+@media screen and (min-width: 992px) {
+
+}
+
+/* Small devices */
+@media screen and (min-width: 768px) {
+
+}
+
+/* Extra small devices */
+@media screen and (max-width: 768px) {
+
+}
