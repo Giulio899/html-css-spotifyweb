@@ -16,7 +16,7 @@
 
 body {
   font-size: 14px;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #717171;
 }
 
@@ -40,6 +40,15 @@ a {
   margin-right: -2px;
   position: relative;
   right: 15px;
+}
+
+.active-bottom::after {
+  content:"";
+  display: block;
+  height: 2px;
+  width: 35%;
+  background-color: #adff2f;
+  margin: 2px auto;
 }
 
 h2, h3 {
@@ -111,7 +120,7 @@ main aside .primary-search ul li {
 
 main aside .primary-search ul li a {
   font-size: 0.9em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 main aside .primary-search ul li span {
@@ -289,7 +298,8 @@ main .main-content .main-content-top a {
 main .main-content-bottom {
   flex-grow: 1;
   padding: 15px;
-  font-weight: 500;
+  font-weight: 600;
+  overflow-y: auto;
 }
 /* main nav */
 main .main-content-bottom nav {
@@ -306,35 +316,60 @@ main .main-content-bottom nav ul li {
   padding: 0 10px;
 }
 
-main .main-content-bottom .recently-played h3 {
+main .main-content-bottom .row h3 {
   font-size: 1.2em;
+}
+
+main .main-content-bottom .recently-played h3 {
   margin-bottom: 20px;
 }
 
-main .main-content-bottom .recently-played ul {
+/* row */
+main .main-content-bottom .row {
+  margin-top: 40px;
+}
+
+main .main-content-bottom .row ul {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
 }
 
-main .main-content-bottom .recently-played ul li {
-  width: calc(100% / 6);
-  padding-right: 10px;
+main .main-content-bottom .row ul li {
+  width: calc(100% / 6 - 10px);
+  margin-right: 10px;
 }
 
-main .main-content-bottom .recently-played ul li img {
+main .main-content-bottom .row ul li img {
   width: 100%;
 }
 
-main .main-content-bottom .recently-played ul li h4 {
+main .main-content-bottom .row ul li h4 {
   margin-top: 10px;
   margin-bottom: 3px;
 }
 
-main .main-content-bottom .recently-played ul li a {
+main .main-content-bottom .row ul li a {
   color: white;
 }
 
+main .main-content-bottom .row p {
+}
+
+
+main .main-content-bottom .playlist-personalizzata h3,
+main .main-content-bottom .artisti-popolari h3 {
+  margin-bottom: 10px;
+}
+
+main .main-content-bottom .playlist-personalizzata p,
+main .main-content-bottom .artisti-popolari p {
+  margin-bottom: 25px;
+}
+
+main .main-content-bottom .artisti-popolari img {
+  border-radius: 50%;
+}
 
 /* /main content */
 /* main */
@@ -361,18 +396,25 @@ footer {
 /* media queries desktop first */
 
 /* Large devices */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1201px) {
 
 }
 
 /* Medium devices */
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 1200px) {
+  main .main-content-bottom .row ul li {
+    width: calc(100% / 4 - 10px);
+    margin-top: 30px;
+  }
 
 }
 
 /* Small devices */
-@media screen and (min-width: 768px) {
-
+@media screen and (max-width: 768px) {
+  main .main-content-bottom .row ul li {
+    width: calc(100% / 2 - 10px);
+    /* margin-top: 30px; */
+  }
 }
 
 /* Extra small devices */
