@@ -71,7 +71,6 @@ h4 {
 main {
   height: calc(100% - 90px);
   display: flex;
-  background-color: #141922;
 }
 /* Inizio aside */
 main aside {
@@ -84,8 +83,12 @@ main aside {
   /* justify-content: space-between; */
 }
 
-main aside .logo img {
+main aside .logo img#logo-desktop {
   width: 140px;
+}
+
+main aside .logo img#logo-mobile {
+  display: none;
 }
 
 main aside .primary-search {
@@ -152,6 +155,7 @@ main aside .playlist-top .row-plus span {
 
 main aside .playlist-bottom {
   margin-top: 15px;
+  min-height: 90px;
   overflow-y: auto;
 }
 
@@ -192,17 +196,22 @@ main aside .new-playlist span {
 
 /* Inizio main content */
 main .main-content {
-  width: calc(100% - 250px);
+  width: calc(100% - 240px);
+  background-color: #141922;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
+
 main .main-content .main-content-top {
+  min-height: 90px;
+  background-color: rgba(8, 11, 18, 0.6);
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-right: 10px;
+  z-index: 2;
 }
 
 main .main-content .main-content-top a {
@@ -222,10 +231,7 @@ main .main-content .main-content-top a {
 
 
 
-main .main-content .main-content-top {
-  height: 90px;
-  background-color: rgba(8, 11, 18, 0.8);
-}
+
 
 main .main-content .main-content-bottom {
   flex-grow: 1;
@@ -239,8 +245,20 @@ main .main-content .main-content-bottom {
 /* Inizio footer */
 footer {
   height: 90px;
-  background-color: grey;
+  background-color: #282828;
+  position: relative;
+  z-index: 1;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 /* media queries desktop first */
@@ -261,6 +279,69 @@ footer {
 }
 
 /* Extra small devices */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
+
+  /* Inizio aside */
+  main aside {
+    width: 50px;
+    padding: 10px;
+  }
+
+  main aside .logo img#logo-desktop {
+    display: none;
+  }
+
+  main aside .logo img#logo-mobile {
+    display: block;
+    width: 28px;
+  }
+
+  main aside .primary-search {
+    margin-top: 10px;
+  }
+
+  main aside .primary-search span {
+    display: none;
+  }
+
+  main aside .primary-search ul li {
+    margin-bottom: 8px;
+    padding: 0;
+    height: 20px;
+  }
+
+  main aside .primary-search .home {
+    position: static;
+    right: 0;
+  }
+
+  .active a {
+    color: #fff;
+  }
+
+  .active::before {
+    display: none;
+  }
+
+  main aside .playlist-top {
+    display: none;
+  }
+
+  main aside .playlist-bottom {
+    display: none;
+  }
+
+  main aside .new-playlist {
+    align-self: center;
+  }
+
+  main aside .new-playlist span {
+    display: none;
+  }
+  /* /aside */
+  /* Inizio main content */
+  main .main-content {
+    width: calc(100% - 50px);
+  }
 
 }
