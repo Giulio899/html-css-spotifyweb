@@ -67,6 +67,10 @@ ul {
   border-radius: 25px;
 }
 
+.btn-empty:hover {
+  transform: scale(1.1);
+}
+
 .container {
   width: 100%;
   height: 100vh;
@@ -264,7 +268,7 @@ main .main-content {
   flex-direction: column;
 }
 
-
+/* main content top */
 main .main-content .main-content-top {
   min-height: 90px;
   background-color: rgba(8, 11, 18, 0.6);
@@ -281,23 +285,55 @@ main .main-content .main-content-top a {
   font-size: 0.9em;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-main .main-content .main-content-bottom {
+/* main content bottom */
+main .main-content-bottom {
   flex-grow: 1;
+  padding: 15px;
+  font-weight: 500;
+}
+/* main nav */
+main .main-content-bottom nav {
+  text-transform: uppercase;
 }
 
+main .main-content-bottom nav ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+main .main-content-bottom nav ul li {
+  padding: 0 10px;
+}
+
+main .main-content-bottom .recently-played h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+main .main-content-bottom .recently-played ul {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+main .main-content-bottom .recently-played ul li {
+  width: calc(100% / 6);
+  padding-right: 10px;
+}
+
+main .main-content-bottom .recently-played ul li img {
+  width: 100%;
+}
+
+main .main-content-bottom .recently-played ul li h4 {
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+main .main-content-bottom .recently-played ul li a {
+  color: white;
+}
 
 
 /* /main content */
