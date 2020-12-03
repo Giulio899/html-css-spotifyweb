@@ -54,13 +54,18 @@ h4 {
   font-size: 0.9em;
 }
 
+ul {
+  list-style-type: none;
+}
+
+/* classi comuni */
+
 
 .btn-empty {
   border: 1px solid white;
   padding: 10px 35px;
   border-radius: 25px;
 }
-
 
 .container {
   width: 100%;
@@ -80,7 +85,6 @@ main aside {
   background-color: #000;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
 }
 
 main aside .logo img#logo-desktop {
@@ -93,10 +97,6 @@ main aside .logo img#logo-mobile {
 
 main aside .primary-search {
   margin-top: 20px;
-}
-
-main aside .primary-search ul {
-  list-style-type: none;
 }
 
 main aside .primary-search ul li {
@@ -123,6 +123,15 @@ main aside .primary-search img {
   width: 25px;
   margin-right: 5px;
   vertical-align: middle;
+  opacity: 0.8;
+}
+
+main aside .primary-search li:hover img {
+  opacity: 1;
+}
+
+main aside .primary-search li:hover span {
+  color: white;
 }
 
 main aside .playlist-top h3 {
@@ -149,48 +158,100 @@ main aside .playlist-top .row-plus i {
   margin-right: 10px;
 }
 
+main aside .playlist-top .row-plus:hover i {
+  background-color: white;
+}
+
 main aside .playlist-top .row-plus span {
   font-weight: 700;
+}
+
+main aside .playlist-top .row-plus:hover span {
+  color: white;
 }
 
 main aside .playlist-bottom {
   margin-top: 15px;
   min-height: 90px;
+}
+
+main aside .playlist-bottom ul {
+  height: 100%;
   overflow-y: auto;
 }
 
-main aside .playlist-bottom h4 {
+/* Questo serve per far comparire visivamente la scroll bar (su Chrome a volte non compare) */
+/* scroll bar */
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(56, 56, 56, 0.8);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+/* /scroll bar */
+
+
+main aside .playlist-bottom li {
   margin-bottom: 15px;
 }
 
-main aside .new-playlist {
-  margin-top: 20px;
-  font-size: 0.9em;
+main aside .playlist-bottom a:hover {
+  color: white;
 }
 
-main aside .new-playlist img {
+main aside .user {
+  margin-top: 20px;
+  font-size: 0.9em;
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+main aside .user img {
   width: 20px;
   vertical-align: middle;
 }
 
-main aside .new-playlist .row-download {
+main aside .user .row-download img {
+  opacity: 0.8;
+}
+
+main aside .user .row-download:hover img {
+  opacity: 1;
+}
+
+main aside .user .row-download {
   border-bottom: 1px solid #717171;
   padding-bottom: 10px;
 }
 
-main aside .new-playlist .row-profile {
+main aside .user .row-profile {
   margin-top: 10px;
 }
 
-main aside .new-playlist .row-profile img {
+main aside .user .row-profile img {
   width: 25px;
   height: 25px;
   background-color: #808080;
   border-radius: 50%;
 }
 
-main aside .new-playlist span {
+main aside .user span {
   margin-left: 5px;
+}
+
+main aside .user .row-download:hover span {
+  color: white;
+}
+
+main aside .user .row-profile span {
+  color: white;
+  font-weight: 700;
+  font-size: 1.1em;
 }
 /* /aside */
 
@@ -331,11 +392,11 @@ footer {
     display: none;
   }
 
-  main aside .new-playlist {
+  main aside .user {
     align-self: center;
   }
 
-  main aside .new-playlist span {
+  main aside .user span {
     display: none;
   }
   /* /aside */
