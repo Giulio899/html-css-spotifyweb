@@ -316,6 +316,10 @@ main .main-content-bottom nav ul li {
   padding: 0 10px;
 }
 
+main .main-content-bottom nav ul li a:hover  {
+  color: white;
+}
+
 main .main-content-bottom .row h3 {
   font-size: 1.2em;
 }
@@ -340,9 +344,47 @@ main .main-content-bottom .row ul li {
   margin-right: 10px;
 }
 
+main .main-content-bottom .img-container {
+  position: relative;
+}
+
 main .main-content-bottom .row ul li img {
   width: 100%;
+  opacity: 1;
+  display: block;
+  transition: opacity 0.2s;
 }
+
+main .main-content-bottom .row ul li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  font-size: 4em;
+  /* transition: opacity 0.2s; */
+}
+
+main .main-content-bottom .img-container:hover img {
+  opacity: 0.5;
+}
+
+main .main-content-bottom .img-container:hover i {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+
+/* main .main-content-bottom .row ul li img:hover {
+  content: "prova";
+  font-size: 2em;
+  font-family: "Font Awesome 5 Free";
+  opacity: 0.5;
+  position: relative;
+  z-index: 1;
+  color: white;
+} */
 
 main .main-content-bottom .row ul li h4 {
   margin-top: 10px;
@@ -352,10 +394,6 @@ main .main-content-bottom .row ul li h4 {
 main .main-content-bottom .row ul li a {
   color: white;
 }
-
-main .main-content-bottom .row p {
-}
-
 
 main .main-content-bottom .playlist-personalizzata h3,
 main .main-content-bottom .artisti-popolari h3 {
