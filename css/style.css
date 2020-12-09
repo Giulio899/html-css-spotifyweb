@@ -888,3 +888,9 @@ footer .footer-right .bar-play:hover .fa-circle {
     }
 
   }
+
+  @media screen and (max-height: 349px) {
+    main .main-content .main-content-top {
+      display: none;
+    }
+  }
